@@ -1,0 +1,19 @@
+@import '../../../core/styles/variables.scss';
+
+.label_container {
+  color: $primary_text_color;
+  font-size: $text_medium_font_size;
+  margin-bottom: 8px;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.error_message {
+  color: $error_color;
+  font-size: $text_small_font_size;
+}
+.require_star {
+  color: $error_color;
+  font-size: $text_medium_font_size;
+}
