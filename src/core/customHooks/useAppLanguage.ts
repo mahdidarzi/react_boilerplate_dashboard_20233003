@@ -1,14 +1,12 @@
 import { useEffect } from 'react';
+import { ReactIntlErrorCode } from 'react-intl';
+
 import { ArabicKeys } from '../locales/ar';
 import { EnglishKeys } from '../locales/en';
-import { ReactIntlErrorCode } from 'react-intl';
-// import { changeLanguage } from 'shared/layout/dashboard/redux/actions/mainAction';
-// import { useAppDispatch, useAppSelector } from 'core/store/hooks';
+
 
 export const useAppLanguage = () => {
-  // const dispatch = useAppDispatch();
   const currentLanguage = 'en';
-  // const currentLanguage = useAppSelector((state) => state.main.currentLanguage);
 
   const messages: any = {
     en: EnglishKeys, // English translations
@@ -23,7 +21,7 @@ export const useAppLanguage = () => {
   };
 
   useEffect(() => {
-    if (currentLanguage === 'en') {
+    if (currentLanguage === 'ar') {
       document.body.classList.remove('ltr');
       document.body.classList.add('rtl');
       document.body.dir = 'rtl';
@@ -39,7 +37,7 @@ export const useAppLanguage = () => {
     if (!currentLanguageLocal) {
       localStorage.setItem('currentLanguage', 'en');
     }
-    // dispatch(changeLanguage(currentLanguageLocal));
+    
   }
 
   return {

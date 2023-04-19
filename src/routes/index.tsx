@@ -1,4 +1,5 @@
 import { useRoutes } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 import { protectedRoutes } from './protected';
 import { publicRoutes } from './public';
@@ -10,8 +11,8 @@ export const AppRoutes = () => {
     {
       path: '/*',
       element: (
-        <p >
-          404
+        <p>
+          <FormattedMessage id="login.welcome.message" />
         </p>
       ),
     },
