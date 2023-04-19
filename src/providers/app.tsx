@@ -2,7 +2,8 @@ import * as React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 
-import { useAppLanguage } from '../core/customHooks/useAppLanguage';
+import { useAppLanguage } from 'core/customHooks/useAppLanguage';
+
 
 type AppProviderProps = {
   children: React.ReactNode;

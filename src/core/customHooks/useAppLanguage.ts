@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { ReactIntlErrorCode } from 'react-intl';
 
-import { ArabicKeys } from '../locales/ar';
-import { EnglishKeys } from '../locales/en';
+import { ArabicKeys } from 'core/locales/ar';
+import { EnglishKeys } from 'core/locales/en';
 
 
 export const useAppLanguage = () => {

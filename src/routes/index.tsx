@@ -1,8 +1,8 @@
 import { useRoutes } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
-import { protectedRoutes } from './protected';
-import { publicRoutes } from './public';
+import { protectedRoutes } from 'routes/protected';
+import { publicRoutes } from 'routes/public';
 
 export const AppRoutes = () => {
   const auth = { user: false };
