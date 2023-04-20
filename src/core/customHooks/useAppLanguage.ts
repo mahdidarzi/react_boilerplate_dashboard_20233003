@@ -20,17 +20,17 @@ export const useAppLanguage = () => {
     console.error(e);
   };
 
-  useEffect(() => {
-    if (currentLanguage === 'ar') {
-      document.body.classList.remove('ltr');
-      document.body.classList.add('rtl');
-      document.body.dir = 'rtl';
-    } else {
-      document.body.classList.remove('rtl');
-      document.body.classList.add('ltr');
-      document.body.dir = 'ltr';
-    }
-  }, [currentLanguage]);
+  // useEffect(() => {
+  //   if (currentLanguage === 'ar') {
+  //     document.body.classList.remove('ltr');
+  //     document.body.classList.add('rtl');
+  //     document.body.dir = 'rtl';
+  //   } else {
+  //     document.body.classList.remove('rtl');
+  //     document.body.classList.add('ltr');
+  //     document.body.dir = 'ltr';
+  //   }
+  // }, [currentLanguage]);
 
   if (typeof window !== 'undefined') {
     const currentLanguageLocal = localStorage.getItem('currentLanguage')!;

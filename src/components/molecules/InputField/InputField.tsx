@@ -2,7 +2,7 @@ import React from 'react';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 import { FieldWrapper } from '../../atoms/FieldWrapper';
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 
 interface InputFieldProps {
   label?: string;
@@ -29,7 +29,7 @@ export const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <FieldWrapper label={label} error={error}>
-      <TextField placeholder={placeholder} type={type}  required={isRequired} disabled={isDisabled} fullWidth {...registration} id="outlined-basic" onChange={onChange} label={label} variant={variant} />
+      {/* <TextField placeholder={placeholder} type={type}  required={isRequired} disabled={isDisabled} fullWidth {...registration} id="outlined-basic" onChange={onChange} label={label} variant={variant} /> */}
     </FieldWrapper>
   );
 };

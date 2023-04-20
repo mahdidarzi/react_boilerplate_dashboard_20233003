@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 
-//
-export const Content = () => {
-  return <div>ContentContent:</div>;
-};
+import { AuthenticationLayout } from 'components/organisms/authenticationLayout';
+import { Login } from 'pages/login';
+
+
 
 export const AuthRoutes = () => {
   return (
     <Routes>
-      <Route path="register" element={<Content />} />
-      <Route path="login" element={<Content />} />
-      <Route path="*" element={<Content />} />
+      <Route path="register" element={<AuthenticationLayout > <Login/></AuthenticationLayout >} />
+      <Route path="login" element={<AuthenticationLayout > <Login/></AuthenticationLayout >} />
+      <Route path="*" element={<AuthenticationLayout > <Login/></AuthenticationLayout >} />
     </Routes>
   );
 };
