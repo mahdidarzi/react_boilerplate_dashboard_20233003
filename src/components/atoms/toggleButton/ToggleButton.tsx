@@ -13,7 +13,9 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
   className = '',
   active = false,
   disabled = false,
-  onClick = () => {},
+  onClick = () => {
+    alert();
+  },
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
