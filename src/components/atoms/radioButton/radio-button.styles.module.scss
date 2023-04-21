@@ -1,0 +1,38 @@
+
+@import '/src/core/styles/variables.scss';
+.base{
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+  }
+}
+
+.not_checked{
+  background-color:$gray_color_100;
+  .circle{
+    background-color:$gray_color_100;
+  }
+ }
+.checked{
+  background-color:$primary_color;
+  .circle{
+    background-color:$app_bg_color;
+  }
+ }
+
+ .disabled_checked{
+  opacity: 0.32;
+ }
+ .disabled_not_checked{
+  background-color:$gray_color_200;
+  .circle{
+    background-color:$gray_color_200;
+  }
+ }

@@ -1,0 +1,41 @@
+
+@import '../../../styles/variables.scss';
+.base {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  width: 40px;
+  height: 20px;
+  border-radius:47px;
+  .circle{
+    transition:all .1s linear;
+    background-color: $app_bg_color;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+  }
+ 
+}
+.inactive{
+  background-color: $stroke_color;
+  &:disabled{
+    background-color:$gray_color_200 !important;
+  }
+  .circle{
+    margin-left:21px;
+  }
+}
+.active{
+  background-color: $primary_color;
+  &:disabled{
+   opacity: 0.32 !important;
+  }
+  .circle{
+    margin-left:3px;
+  }
+}
+
+

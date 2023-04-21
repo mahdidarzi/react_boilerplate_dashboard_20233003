@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { InputField,Form } from 'components/molecules';
+import { RadioButton } from 'components/atoms';
 
 interface loginProps {
   label?: string;
@@ -22,6 +23,8 @@ export const Login: React.FC<loginProps> = ({ label }) => {
           return (
             <>
               <InputField registration={register('Title1')} placeholder="placeholder" />
+              <RadioButton isChecked={false}  />
+              <RadioButton isChecked={true}  />
             </>
           );
         }}
