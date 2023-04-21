@@ -1,35 +1,53 @@
-import React from 'react';
+import classnames from 'classnames';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
-import { FieldWrapper } from '../../atoms/FieldWrapper';
-// import TextField from '@mui/material/TextField';
+import { FieldWrapper } from 'components/atoms/FieldWrapper';
+
+import styles from './InputField.module.scss';
 
 interface InputFieldProps {
-  label?: string;
+  className?: string;
+  type?: 'text' | 'email' | 'password';
+  defaultValue?: string;
   placeholder?: string;
-  registration: Partial<UseFormRegisterReturn>;
-  error?: FieldError | undefined | boolean;
   isRequired?: boolean;
   isDisabled?: boolean;
-  type?: 'text' | 'number' | 'password';
-  variant?: 'filled' | 'outlined' | 'standard' ;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  registration: Partial<UseFormRegisterReturn>;
+  label?: string;
+  error?: FieldError | undefined | boolean;
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
+  className='',
+  type = 'text',
   label,
   registration,
   error,
-  isRequired,
   isDisabled,
-  type="text",
-  variant='outlined',
-  placeholder='default placeholder',
-  onChange,
+  isRequired,
+  defaultValue,
+  placeholder = 'Here is Placeholder',
 }) => {
+  const classes = classnames(styles.base, {
+    [className]: className,
+    [styles.base]: !error,
+    [styles.base_error]: error,
+    [styles.base_disabled]: isDisabled,
+  });
+
   return (
-    <FieldWrapper label={label} error={error}>
-      {/* <TextField placeholder={placeholder} type={type}  required={isRequired} disabled={isDisabled} fullWidth {...registration} id="outlined-basic" onChange={onChange} label={label} variant={variant} /> */}
+    <FieldWrapper label={label} error={error} isRequired={isRequired}>
+      <div className={classes}>
+        <input
+          defaultValue={defaultValue}
+          disabled={isDisabled}
+          placeholder={placeholder}
+          type={type}
+          className={`${styles.input}`}
+          {...registration}
+        />
+        {/* {error ? <Icons type="error" className={styles.error_icon} /> : null} */}
+      </div>
     </FieldWrapper>
   );
 };

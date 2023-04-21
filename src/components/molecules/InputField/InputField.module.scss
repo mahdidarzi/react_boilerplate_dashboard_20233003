@@ -1,8 +1,9 @@
-@import '../../../core/styles/variables.scss';
+@import '/src/core/styles/variables.scss';
 
 .base {
-  background: $app_surface_color 0% 0% no-repeat padding-box;
-  border: 1px solid  $app_surface_color;
+  background: transparent;
+  // background: $app_surface_color 0% 0% no-repeat padding-box;
+  border: 1px solid  $app_bg_contrast_color_100;
   border-radius: 8px;
   opacity: 1;
   width: 400px;
@@ -11,14 +12,18 @@
   gap: 16px;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 5px;
   &:focus-within {
-    background: $app_bg_color 0% 0% no-repeat padding-box;
+    // background: $app_bg_color 0% 0% no-repeat padding-box;
+      background: transparent;
+
     border: 1px solid #e9d3fc;
   }
   &_error {
-    background: #fffcfc 0% 0% no-repeat padding-box;
-    border: 1px solid $error_color;
+    // background: #fffcfc 0% 0% no-repeat padding-box;
+    background: transparent;
+
+    border: 1px solid  $app_bg_contrast_color_100;
     border-radius: 8px;
     width: 400px;
     height: 48px;
