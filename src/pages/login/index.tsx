@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Form } from 'components/molecules/form';
-import { InputField } from 'components/molecules/InputField';
+import { InputField,Form } from 'components/molecules';
 
 interface loginProps {
   label?: string;
