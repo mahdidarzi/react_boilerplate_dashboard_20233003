@@ -17,8 +17,8 @@
     // background: $app_bg_color 0% 0% no-repeat padding-box;
       background: transparent;
 
-    border: 1px solid #e9d3fc;
-  }
+      border: 1px solid  $app_bg_contrast_color_100;
+    }
   &_error {
     // background: #fffcfc 0% 0% no-repeat padding-box;
     background: transparent;
