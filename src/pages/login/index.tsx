@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { InputField,Form } from 'components/molecules';
-import { RadioButton, ToggleButton } from 'components/atoms';
+import { CheckBox, RadioButton, ToggleButton } from 'components/atoms';
 
 interface loginProps {
   label?: string;
@@ -27,6 +27,8 @@ export const Login: React.FC<loginProps> = ({ label }) => {
               <RadioButton isChecked={true}  />
               <ToggleButton active={false}  />
               <ToggleButton active={true}  />
+              <CheckBox isChecked={false}   />
+              <CheckBox isChecked={true}   />
             </>
           );
         }}

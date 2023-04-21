@@ -15,13 +15,15 @@ export const CheckBox: React.FC<CheckBoxProps> = ({
   className = '',
   isChecked = false,
   isDisabled = false,
-  onClick = () => {},
+  onClick = () => {
+    alert();
+  },
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
 
-    [styles.disabled_checked]:isChecked && isDisabled,
-    [styles.disabled_not_checked]:!isChecked && isDisabled,
+    [styles.disabled_checked]: isChecked && isDisabled,
+    [styles.disabled_not_checked]: !isChecked && isDisabled,
     [styles.checked]: isChecked,
     [styles.not_checked]: isChecked === false,
   });
