@@ -1,0 +1,16 @@
+@import '/src/core/styles/variables.scss';
+.base {
+  display: flex;
+  cursor: pointer;
+  gap: 7px;
+  align-items: center;
+  color: $app_bg_contrast_color;
+  font-weight: bold;
+  &:active {
+    opacity: 0.5;
+  }
+}
+.flag {
+  width: 20px;
+  height: 20px;
+}

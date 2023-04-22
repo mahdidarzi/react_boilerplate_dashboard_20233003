@@ -16,8 +16,8 @@ type FormValues = {
 export const Login: React.FC<loginProps> = ({ label }) => {
   return (
     <div>
-      {/* <>Login</> */}
-      <Form<FormValues>
+      
+      {/* <Form<FormValues>
         onSubmit={async (values) => {
           alert(JSON.stringify(values, null, 2));
         }}
@@ -27,8 +27,7 @@ export const Login: React.FC<loginProps> = ({ label }) => {
           return (
             <>
               <InputField registration={register('Title1')} placeholder="placeholder" />
-              {/* <RadioButton isChecked={false}  />
-              <RadioButton isChecked={true}  /> */}
+            
               <ToggleButton active={false}  />
               <ToggleButton active={true}  />
               <CheckBox registration={register('Title2')}    />
@@ -39,7 +38,7 @@ export const Login: React.FC<loginProps> = ({ label }) => {
             </>
           );
         }}
-      </Form>
+      </Form> */}
     </div>
   );
 };

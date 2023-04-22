@@ -5,7 +5,7 @@ import { FieldWrapper } from 'components/atoms';
 
 import styles from './check-box.styles.module.scss';
 
-interface InputFieldProps {
+interface CheckBoxProps {
   className?: string;
   type?: 'checkbox';
   isRequired?: boolean;
@@ -13,7 +13,7 @@ interface InputFieldProps {
   registration: Partial<UseFormRegisterReturn>;
 }
 
-export const CheckBox: React.FC<InputFieldProps> = ({
+export const CheckBox: React.FC<CheckBoxProps> = ({
   className = '',
   type = 'checkbox',
 
