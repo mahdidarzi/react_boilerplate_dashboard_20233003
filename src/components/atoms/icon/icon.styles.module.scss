@@ -1,0 +1,24 @@
+
+@import '/src/core/styles/variables.scss';
+.base {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.disabled_checked{
+  opacity: 0.32;
+}
+.checked{
+  background-color: $primary_color;
+}
+.not_checked{
+  background-color: $gray_color_100;
+}
+.disabled_not_checked{
+  background-color: $gray_color_200 !important;
+}

@@ -1,0 +1,43 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  margin: 24px 8px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.people {
+  display: flex;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  img {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    transition: all 200ms ease-in-out 0s;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    border: 0.125rem solid rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    margin-left: -10px;
+    &:hover {
+      z-index: 5;
+    }
+  }
+}
