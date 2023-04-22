@@ -8,6 +8,10 @@ interface loginProps {
 }
 type FormValues = {
   Title1: string;
+  Title2: string;
+  Title3: string;
+  Title4: string;
+  Title5: string;
 };
 export const Login: React.FC<loginProps> = ({ label }) => {
   return (
@@ -23,12 +27,15 @@ export const Login: React.FC<loginProps> = ({ label }) => {
           return (
             <>
               <InputField registration={register('Title1')} placeholder="placeholder" />
-              <RadioButton isChecked={false}  />
-              <RadioButton isChecked={true}  />
+              {/* <RadioButton isChecked={false}  />
+              <RadioButton isChecked={true}  /> */}
               <ToggleButton active={false}  />
               <ToggleButton active={true}  />
-              <CheckBox isChecked={false}   />
-              <CheckBox isChecked={true}   />
+              <CheckBox registration={register('Title2')}    />
+              <CheckBox  registration={register('Title3')}    />
+              <RadioButton defaultValue='defaultValu1'  registration={register('Title4')}    />
+              <RadioButton defaultValue='defaultValue2'  registration={register('Title4')}    />
+              <button>button</button>
             </>
           );
         }}
