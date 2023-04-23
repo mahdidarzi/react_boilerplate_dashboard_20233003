@@ -16,5 +16,4 @@ export const Default = Template.bind({});
 Default.args = {
   className: '',
   isDisabled: false,
-  isChecked: true,
 };

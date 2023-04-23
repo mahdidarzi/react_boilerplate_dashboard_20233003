@@ -1,0 +1,22 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  padding: 24px;
+  & h6 {
+    margin: 0px;
+    font-size: 1rem;
+    line-height: 1.625;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.0075em;
+    text-transform: capitalize;
+    color: $primary;
+    font-weight: 600;
+  }
+
+  & .chatContainer {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+}

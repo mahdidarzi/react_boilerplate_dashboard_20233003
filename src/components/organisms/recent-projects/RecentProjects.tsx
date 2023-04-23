@@ -104,7 +104,7 @@ const data = [
 
 export const RecentProjects: FunctionComponent = () => {
   return (
-    <Row>
+    <Row className="gy-3">
       <Col xs={12}>
         <h6 className={Styles.title}>
           <FormattedMessage id="projects" />
@@ -116,7 +116,7 @@ export const RecentProjects: FunctionComponent = () => {
         </p>
       </Col>
       {data.map((item, index) => (
-        <Col key={index} md={3} xs={1}>
+        <Col key={index} md={4} lg={3} xs={12}>
           <ProjectCard {...item} />
         </Col>
       ))}

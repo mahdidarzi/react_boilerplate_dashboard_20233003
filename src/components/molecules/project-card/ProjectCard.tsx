@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import Styles from './ProjectCard.module.scss';
-import { ProfileCardFooter } from '../../atoms/product-card-footer';
+import { ProfileCardFooter } from '../product-card-footer';
 
 interface Props {
   image: string;

@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import Styles from './ProfileCardFooter.module.scss';
 import { FormattedMessage } from 'react-intl';
-import { ProfileImage } from '../profile-image';
-import { Button } from '../button';
+import { ProfileImage } from '../../atoms/profile-image';
+import { Button } from '../../atoms/button';
 
 interface Props {
   onClick?: () => void;

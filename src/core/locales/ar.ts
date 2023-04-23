@@ -1,8 +1,6 @@
 import { ITranslation } from '.';
+import { EnglishKeys } from './en';
 
 export const ArabicKeys: ITranslation = {
-  'login.welcome.message': 'اهلا بك!',
-  'project.viewProject': 'VIEW PROJECT',
-  projects: 'projects',
-  'projects.description': 'Architects design houses',
+  ...EnglishKeys,
 };

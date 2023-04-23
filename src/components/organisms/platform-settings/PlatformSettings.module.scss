@@ -1,0 +1,29 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  & h6 {
+    margin: 0px;
+    font-size: 1rem;
+    line-height: 1.625;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.0075em;
+    text-transform: capitalize;
+    color: $primary;
+    font-weight: 600;
+    padding: 24px;
+  }
+
+  & p {
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.02857em;
+    opacity: 1;
+    text-transform: none;
+    vertical-align: unset;
+    text-decoration: none;
+    color: rgb(123, 128, 154);
+    font-weight: 400;
+  }
+}

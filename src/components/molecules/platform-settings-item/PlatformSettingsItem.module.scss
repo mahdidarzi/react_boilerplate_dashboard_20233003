@@ -1,0 +1,21 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+  padding: 24px;
+  & span {
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    letter-spacing: 0.03333em;
+    opacity: 1;
+    text-transform: uppercase;
+    vertical-align: unset;
+    text-decoration: none;
+    color: rgb(123, 128, 154);
+    font-weight: 700;
+  }
+}

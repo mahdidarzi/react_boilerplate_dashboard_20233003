@@ -1,0 +1,57 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  display: flex;
+  flex-direction: row;
+
+  a {
+    margin: 0px;
+    cursor: pointer;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 150ms ease-in 0s;
+    background-color: transparent;
+    min-height: 2.5rem;
+    box-shadow: none;
+    padding: 0.625rem 1.5rem;
+    color: rgb(26, 115, 232) !important;
+    background-size: 150% !important;
+    background-position-x: 25% !important;
+  }
+}
+
+.name {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 600;
+}
+
+.text {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0.03333em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(123, 128, 154);
+}
