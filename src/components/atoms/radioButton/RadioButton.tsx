@@ -1,40 +1,47 @@
-import React from 'react';
 import classnames from 'classnames';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
+
+import { FieldWrapper } from 'components/atoms';
 
 import styles from './radio-button.styles.module.scss';
 
 interface RadioButtonProps {
   className?: string;
-  isChecked: boolean;
+  name?: string;
+  type?: 'radio';
+  defaultValue?: string;
+  placeholder?: string;
+  isRequired?: boolean;
   isDisabled?: boolean;
-  onClick?: () => void;
+  registration: Partial<UseFormRegisterReturn>;
+  label?: string;
+  error?: FieldError | undefined | boolean;
 }
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
   className = '',
-  isChecked = false,
-  isDisabled = false,
-  onClick = () => {
-    alert();
-  },
+  type = 'radio',
+  label,
+  registration,
+  isDisabled,
+  isRequired,
+  name
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
-
-    [styles.checked]: isChecked,
-    [styles.not_checked]: !isChecked,
-
-    [styles.disabled_checked]: isDisabled && isChecked,
-    [styles.disabled_not_checked]: isDisabled && !isChecked,
   });
+
   return (
-    <div
-      className={classes}
-      onClick={() => {
-        isDisabled ? null : onClick();
-      }}
-    >
-      <div className={styles.circle}></div>
-    </div>
+    <FieldWrapper isRequired={isRequired}>
+      <div className={classes}>
+        <input
+          className={classes}
+          disabled={isDisabled}
+          type={type}
+          name={name}
+          {...registration}
+        />
+      </div>
+    </FieldWrapper>
   );
 };

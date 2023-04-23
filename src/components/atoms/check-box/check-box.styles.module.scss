@@ -2,13 +2,7 @@
 @import '/src/core/styles/variables.scss';
 .base {
   width: 24px;
-  height: 24px;
-  border-radius: 8px;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  height: 24px;  
 }
 .disabled_checked{
   opacity: 0.32;

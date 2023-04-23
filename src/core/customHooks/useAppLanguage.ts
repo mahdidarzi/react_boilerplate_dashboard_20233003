@@ -3,10 +3,12 @@ import { ReactIntlErrorCode } from 'react-intl';
 
 import { ArabicKeys } from 'core/locales/ar';
 import { EnglishKeys } from 'core/locales/en';
+import { RootState } from 'core/redux/store';
+import { useSelector } from 'react-redux';
 
 
 export const useAppLanguage = () => {
-  const currentLanguage = 'en';
+  const CURRENT_LANGUAGE = useSelector((state: RootState) => state.globalReducer.language);
 
   const messages: any = {
     en: EnglishKeys, // English translations
@@ -20,29 +22,29 @@ export const useAppLanguage = () => {
     console.error(e);
   };
 
-  // useEffect(() => {
-  //   if (currentLanguage === 'ar') {
-  //     document.body.classList.remove('ltr');
-  //     document.body.classList.add('rtl');
-  //     document.body.dir = 'rtl';
-  //   } else {
-  //     document.body.classList.remove('rtl');
-  //     document.body.classList.add('ltr');
-  //     document.body.dir = 'ltr';
-  //   }
-  // }, [currentLanguage]);
+  useEffect(() => {
+    if (CURRENT_LANGUAGE === 'arabic') {
+      document.body.classList.remove('ltr');
+      document.body.classList.add('rtl');
+      document.body.dir = 'rtl';
+    } else {
+      document.body.classList.remove('rtl');
+      document.body.classList.add('ltr');
+      document.body.dir = 'ltr';
+    }
+  }, [CURRENT_LANGUAGE]);
 
   if (typeof window !== 'undefined') {
-    const currentLanguageLocal = localStorage.getItem('currentLanguage')!;
-    if (!currentLanguageLocal) {
-      localStorage.setItem('currentLanguage', 'en');
+    const CURRENT_LANGUAGELocal = localStorage.getItem('CURRENT_LANGUAGE')!;
+    if (!CURRENT_LANGUAGELocal) {
+      localStorage.setItem('CURRENT_LANGUAGE', 'en');
     }
     
   }
 
   return {
-    currentLanguage,
-    translations: messages[currentLanguage as keyof typeof messages],
+    CURRENT_LANGUAGE,
+    translations: messages[CURRENT_LANGUAGE as keyof typeof messages],
     onTranslationError: onError,
   };
 };

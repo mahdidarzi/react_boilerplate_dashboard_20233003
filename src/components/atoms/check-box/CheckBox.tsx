@@ -1,35 +1,37 @@
-import React from 'react';
 import classnames from 'classnames';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
-import { CheckIcon } from './assets/CheckIcon';
+import { FieldWrapper } from 'components/atoms';
+
 import styles from './check-box.styles.module.scss';
 
 interface CheckBoxProps {
   className?: string;
+  type?: 'checkbox';
+  isRequired?: boolean;
   isDisabled?: boolean;
-  isChecked: boolean;
-  onClick?: () => void;
+  registration: Partial<UseFormRegisterReturn>;
 }
 
 export const CheckBox: React.FC<CheckBoxProps> = ({
   className = '',
-  isChecked = false,
-  isDisabled = false,
-  onClick = () => {
-    alert();
-  },
+  type = 'checkbox',
+
+  registration,
+
+  isDisabled,
+  isRequired,
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
-
-    [styles.disabled_checked]: isChecked && isDisabled,
-    [styles.disabled_not_checked]: !isChecked && isDisabled,
-    [styles.checked]: isChecked,
-    [styles.not_checked]: isChecked === false,
+    [styles.base_disabled]: isDisabled,
   });
+
   return (
-    <div className={classes} onClick={onClick}>
-      {isChecked ? <CheckIcon /> : null}
-    </div>
+    <FieldWrapper isRequired={isRequired}>
+      <div>
+        <input disabled={isDisabled} type={type} className={classes} {...registration} />
+      </div>
+    </FieldWrapper>
   );
 };
