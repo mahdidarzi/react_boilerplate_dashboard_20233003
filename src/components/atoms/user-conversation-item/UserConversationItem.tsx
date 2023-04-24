@@ -1,9 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import Styles from './UserConversationItem.module.scss';
-import classNames from 'classnames';
-import { ProfileImage } from '../profile-image';
 import { FormattedMessage } from 'react-intl';
-import { Button } from '..';
+import { ProfileImage } from '..';
 
 interface Props {
   profileImage: string;

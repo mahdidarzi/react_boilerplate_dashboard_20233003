@@ -1,0 +1,12 @@
+$themes: (
+  light: (
+    --header-background-color: rgba(255, 255, 255, 0.8),
+    --background-color: white,
+    --text-primary: 323232,
+  ),
+  dark: (
+    --header-background-color: rgba(0, 0, 0, 0.8),
+    --background-color: #323232,
+    --text-primary: white,
+  ),
+);

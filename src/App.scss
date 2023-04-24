@@ -1,3 +1,5 @@
+@import '/src/core/styles/mixins';
+
 .App {
   text-align: center;
 }
@@ -45,4 +47,9 @@ h4,
 h5,
 h6 {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+@include import-colors();
+body {
+  background: var(--background-color) !important;
 }

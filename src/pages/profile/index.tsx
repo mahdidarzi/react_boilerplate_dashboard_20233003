@@ -1,12 +1,10 @@
 import { FunctionComponent } from 'react';
 import Styles from './Profile.module.scss';
 import { RecentProjects } from 'components/organisms/recent-projects/RecentProjects';
-import { HeroImage } from 'components/atoms/hero-image';
 import { Col, Container, Row } from 'react-bootstrap';
-import { ProfileImage } from 'components/atoms/profile-image';
 import { useSelector } from 'react-redux';
 import { RootState } from 'core/redux/store';
-import { Card } from 'components/atoms/card';
+import { CardWrapper, HeroImage, ProfileImage } from 'components/atoms';
 import { TabButton, PlatformSettings, UserConversations, ProfileInformation } from 'components/organisms';
 
 export const Profile: FunctionComponent = () => {
@@ -15,7 +13,7 @@ export const Profile: FunctionComponent = () => {
   return (
     <Container>
       <HeroImage />
-      <Card overlay>
+      <CardWrapper overlay>
         <Row>
           <Col className="d-flex align-items-center" md={6}>
             <ProfileImage large rounded src={user.profileImage} />
@@ -42,7 +40,7 @@ export const Profile: FunctionComponent = () => {
           </Col>
         </Row>
         <RecentProjects />
-      </Card>
+      </CardWrapper>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProvider } from './providers/app';
 import { AppRoutes } from './routes';
 

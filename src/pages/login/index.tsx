@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputField,Form } from 'components/molecules';
+import { InputField, Form } from 'components/molecules';
 import { CheckBox, RadioButton, ToggleButton } from 'components/atoms';
 
 interface loginProps {
@@ -16,7 +16,6 @@ type FormValues = {
 export const Login: React.FC<loginProps> = ({ label }) => {
   return (
     <div>
-      
       {/* <Form<FormValues>
         onSubmit={async (values) => {
           alert(JSON.stringify(values, null, 2));

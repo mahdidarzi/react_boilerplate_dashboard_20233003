@@ -1,0 +1,11 @@
+@import 'color-palette';
+
+@mixin import-colors() {
+  @each $theme-name, $theme-color in $themes {
+    html[class*='#{$theme-name}'] {
+      @each $key, $value in $theme-color {
+        #{$key}: $value;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ interface Props extends React.PropsWithChildren<React.HTMLProps<HTMLDivElement>>
   overlay?: boolean;
 }
 
-export const Card: FunctionComponent<Props> = ({ className = '', children, overlay = false, ...props }) => {
+export const CardWrapper: FunctionComponent<Props> = ({ className = '', children, overlay = false, ...props }) => {
   const classes = classNames(Styles.base, { [className]: className, [Styles.overlay]: overlay });
   return (
     <div {...props} className={classes}>

@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 import styles from './check-box.styles.module.scss';
-import { FieldWrapper } from '../FieldWrapper';
+import { FieldWrapper } from '..';
 
 interface CheckBoxProps {
   className?: string;

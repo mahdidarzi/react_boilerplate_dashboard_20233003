@@ -1,10 +1,8 @@
 import { useRoutes } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
-
 import { protectedRoutes } from 'routes/protected';
 import { publicRoutes } from 'routes/public';
-import { ProjectCard } from 'components/molecules/project-card';
-import { Profile } from 'pages/login/profile';
+import { Profile } from 'pages/profile';
+import { Login } from 'pages/login';
 
 export const AppRoutes = () => {
   const auth = { user: false };
@@ -12,7 +10,7 @@ export const AppRoutes = () => {
   const commonRoutes = [
     {
       path: '/*',
-      element: <Profile />,
+      element: <Login />,
     },
   ];
 

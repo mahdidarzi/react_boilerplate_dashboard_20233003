@@ -1,7 +1,6 @@
 import React, { Children, FunctionComponent } from 'react';
 import Styles from './IconButton.module.scss';
-import { Button, ButtonProps } from 'components/atoms/button';
-import { Icon } from 'components/atoms/icon';
+import { Button, ButtonProps, Icon } from 'components/atoms';
 
 interface Props extends ButtonProps {
   icon: string;
