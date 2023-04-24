@@ -3,19 +3,18 @@ import classnames from 'classnames';
 
 import styles from './toggle-button.styles.module.scss';
 
-interface ToggleButtonProps {
-  className?: string;
-  disabled?: boolean;
-  active: boolean;
-  onClick?: () => void;
+interface ToggleButtonProps extends React.PropsWithChildren<React.HTMLProps<HTMLInputElement>> {
+  title?: string;
+  active?: boolean;
 }
 export const ToggleButton: React.FC<ToggleButtonProps> = ({
+  name = 'checkbox',
   className = '',
-  active = false,
+  active = true,
   disabled = false,
-  onClick = () => {
-    alert();
-  },
+  onClick,
+  children,
+  ...props
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
@@ -23,8 +22,13 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
     [styles.inactive]: !active,
   });
   return (
-    <button disabled={disabled} className={classes} onClick={onClick}>
-      <div className={styles.circle}></div>
-    </button>
+    <div className={classes}>
+      <div className={styles.switch}>
+        <input {...props} type="checkbox" id={name} className={styles.switch__input} />
+        <label htmlFor={name} className={styles.switch__label}>
+          {children}
+        </label>
+      </div>
+    </div>
   );
 };

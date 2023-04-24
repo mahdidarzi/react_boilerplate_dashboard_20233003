@@ -1,8 +1,3 @@
-import classnames from 'classnames';
-import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
-
-import { FieldWrapper } from 'components/atoms';
-
 import styles from './LanguageChanger.styles.module.scss';
 
 interface LanguageChangerProps {
@@ -11,7 +6,11 @@ interface LanguageChangerProps {
   onChange: (key: 'arabic' | 'english') => void;
 }
 
-export const LanguageChanger: React.FC<LanguageChangerProps> = ({ className = '',onChange,currentLanguage='english' }) => {
+export const LanguageChanger: React.FC<LanguageChangerProps> = ({
+  className = '',
+  onChange,
+  currentLanguage = 'english',
+}) => {
   const LANGUAGES = [
     {
       title: 'عربي ',
@@ -26,7 +25,7 @@ export const LanguageChanger: React.FC<LanguageChangerProps> = ({ className = ''
       imag: '/assets/images/general/en.png',
     },
   ];
-  const CURRENT_LANGUAGE = LANGUAGES[currentLanguage!== 'arabic' ? 0 : 1];
+  const CURRENT_LANGUAGE = LANGUAGES[currentLanguage !== 'arabic' ? 0 : 1];
   return (
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore

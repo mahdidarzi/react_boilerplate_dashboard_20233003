@@ -1,8 +1,3 @@
-import classnames from 'classnames';
-import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
-
-import { FieldWrapper } from 'components/atoms';
-
 import styles from './ThemChanger.styles.module.scss';
 
 interface LanguageChangerProps {

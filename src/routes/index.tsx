@@ -3,6 +3,8 @@ import { FormattedMessage } from 'react-intl';
 
 import { protectedRoutes } from 'routes/protected';
 import { publicRoutes } from 'routes/public';
+import { ProjectCard } from 'components/molecules/project-card';
+import { Profile } from 'pages/login/profile';
 
 export const AppRoutes = () => {
   const auth = { user: false };
@@ -10,11 +12,7 @@ export const AppRoutes = () => {
   const commonRoutes = [
     {
       path: '/*',
-      element: (
-        <p>
-          <FormattedMessage id="login.welcome.message" />
-        </p>
-      ),
+      element: <Profile />,
     },
   ];
 

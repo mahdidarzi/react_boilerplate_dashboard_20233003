@@ -1,0 +1,39 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  user-select: none;
+  transition: all 200ms ease-in-out 0s;
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.12) 0rem 0.3125rem 0.625rem 0rem;
+  font-size: 1rem;
+  border-radius: 16px;
+
+  &:hover {
+    z-index: 2;
+  }
+}
+
+.small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.medium {
+  width: 3rem;
+  height: 3rem;
+}
+
+.large {
+  width: 4.625rem;
+  height: 4.625rem;
+}
+
+.rounded {
+  border-radius: 50%;
+}

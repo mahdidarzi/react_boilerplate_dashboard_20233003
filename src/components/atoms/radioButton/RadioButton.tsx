@@ -1,9 +1,8 @@
 import classnames from 'classnames';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
-import { FieldWrapper } from 'components/atoms';
-
 import styles from './radio-button.styles.module.scss';
+import { FieldWrapper } from '../FieldWrapper';
 
 interface RadioButtonProps {
   className?: string;
@@ -13,7 +12,7 @@ interface RadioButtonProps {
   placeholder?: string;
   isRequired?: boolean;
   isDisabled?: boolean;
-  registration: Partial<UseFormRegisterReturn>;
+  registration?: Partial<UseFormRegisterReturn>;
   label?: string;
   error?: FieldError | undefined | boolean;
 }
@@ -25,7 +24,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   registration,
   isDisabled,
   isRequired,
-  name
+  name,
 }) => {
   const classes = classnames(styles.base, {
     [className]: className,
@@ -34,13 +33,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   return (
     <FieldWrapper isRequired={isRequired}>
       <div className={classes}>
-        <input
-          className={classes}
-          disabled={isDisabled}
-          type={type}
-          name={name}
-          {...registration}
-        />
+        <input className={classes} disabled={isDisabled} type={type} name={name} {...registration} />
       </div>
     </FieldWrapper>
   );

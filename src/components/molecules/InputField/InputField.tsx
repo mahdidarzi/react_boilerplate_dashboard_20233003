@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
-import { FieldWrapper } from 'components/atoms';
+import { FieldWrapper } from '../../atoms';
 
 import styles from './InputField.module.scss';
 
@@ -18,7 +18,7 @@ interface InputFieldProps {
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
-  className='',
+  className = '',
   type = 'text',
   label,
   registration,

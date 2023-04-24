@@ -6,13 +6,12 @@ import { EnglishKeys } from 'core/locales/en';
 import { RootState } from 'core/redux/store';
 import { useSelector } from 'react-redux';
 
-
 export const useAppLanguage = () => {
   const CURRENT_LANGUAGE = useSelector((state: RootState) => state.globalReducer.language);
 
   const messages: any = {
-    en: EnglishKeys, // English translations
-    ar: ArabicKeys, // Arabic translations
+    english: EnglishKeys, // English translations
+    arabic: ArabicKeys, // Arabic translations
   };
 
   const onError = (e: { code: string }) => {
@@ -39,14 +38,11 @@ export const useAppLanguage = () => {
     if (!CURRENT_LANGUAGELocal) {
       localStorage.setItem('CURRENT_LANGUAGE', 'en');
     }
-    
   }
 
   return {
-    CURRENT_LANGUAGE,
+    currentLanguage: CURRENT_LANGUAGE,
     translations: messages[CURRENT_LANGUAGE as keyof typeof messages],
     onTranslationError: onError,
   };
 };
-
-

@@ -1,41 +1,99 @@
-
 @import '/src/core/styles/variables.scss';
-.base {
-  cursor: pointer;
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title {
+  display: block;
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+// Variables
+$bg-disabled-color: rgba(0, 0, 0, 0.26);
+$bg-enabled-color: rgb(52, 71, 103);
+$lever-disabled-color: #fff;
+$lever-enabled-color: white;
+
+// Switch
+.switch {
+  display: inline-block;
   position: relative;
-  border: none;
-  width: 40px;
-  height: 20px;
-  border-radius:47px;
-  .circle{
-    transition:all .1s linear;
-    background-color: $app_bg_color;
-    width: 16px;
-    height: 16px;
-    border-radius: 16px;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+
+  &__input {
     position: absolute;
-    top: 2px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 20px;
+    opacity: 0;
+    z-index: 0;
   }
- 
-}
-.inactive{
-  background-color: $stroke_color;
-  &:disabled{
-    background-color:$gray_color_200 !important;
-  }
-  .circle{
-    margin-left:21px;
-  }
-}
-.active{
-  background-color: $primary_color;
-  &:disabled{
-   opacity: 0.32 !important;
-  }
-  .circle{
-    margin-left:3px;
-  }
-}
 
+  // Unchecked
+  &__label {
+    display: block;
+    padding: 0 0 0 44px;
+    cursor: pointer;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 36px;
+      height: 14px;
+      background-color: $bg-disabled-color;
+      border-radius: 14px;
+      z-index: 1;
+      transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $lever-disabled-color;
+      border-radius: 14px;
+
+      box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem,
+        rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
+      z-index: 2;
+      transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: left, background-color;
+      border: 0.0625rem solid rgb(206, 212, 218);
+    }
+  }
+
+  // Checked
+  &__input:checked + &__label {
+    &:before {
+      background-color: $bg-enabled-color;
+    }
+
+    &:after {
+      left: 16px;
+      background-color: $lever-enabled-color;
+    }
+  }
+
+  // Focused
+  // Uncomment for accessible outline
+  // &__input:focus + &__label {
+  //     &:after {
+  //         outline: 1px dotted currentColor;
+  //     }
+  // }
+}
