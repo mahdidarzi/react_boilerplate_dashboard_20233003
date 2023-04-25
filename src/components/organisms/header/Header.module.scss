@@ -1,13 +1,17 @@
 .base {
   padding: 8px 16px;
-  margin: 24px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 16px;
   width: calc(100% - 48px);
+  max-width: 1320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   z-index: 3;
-  background: var(--header-background-color);
+  background-color: var(--header-background-color);
   color: var(--text-primary);
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.06) 0rem 0.125rem 0.25rem -0.0625rem;
@@ -20,8 +24,32 @@
   }
   & .title {
     color: var(--text-primary);
+    font-weight: 600;
     margin: 0;
     text-align: center;
     height: 100%;
+  }
+}
+
+.nav {
+  button {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+
+    span {
+      margin-right: 8px;
+    }
+  }
+}
+
+.transparent {
+  backdrop-filter: unset;
+  background-color: transparent;
+  box-shadow: none;
+  .nav {
+    button {
+      color: var(--text-primary);
+    }
   }
 }

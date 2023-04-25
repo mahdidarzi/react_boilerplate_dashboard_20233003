@@ -1,12 +1,24 @@
 $themes: (
   light: (
     --header-background-color: rgba(255, 255, 255, 0.8),
+    --login-bg: (
+      rgb(26, 115, 232),
+      rgb(73, 163, 241),
+    ),
     --background-color: white,
-    --text-primary: 323232,
+    --text-primary: rgb(52, 71, 103),
+    --text-primary-light: white,
+    --text-secondary: rgb(123, 128, 154),
   ),
   dark: (
     --header-background-color: rgba(0, 0, 0, 0.8),
+    --login-bg: (
+      rgb(7, 7, 7),
+      rgb(34, 44, 53),
+    ),
     --background-color: #323232,
     --text-primary: white,
+    --text-primary-light: #323232,
+    --text-secondary: rgb(123, 128, 154),
   ),
 );

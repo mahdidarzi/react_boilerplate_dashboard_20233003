@@ -1,0 +1,8 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, var(--login-bg));
+  display: flex;
+  flex-direction: column;
+}

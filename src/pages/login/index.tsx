@@ -1,43 +1,10 @@
 import React from 'react';
+import { LoginLayout, UserLoginForm } from 'components/organisms';
 
-import { InputField, Form } from 'components/molecules';
-import { CheckBox, RadioButton, ToggleButton } from 'components/atoms';
-
-interface loginProps {
-  label?: string;
-}
-type FormValues = {
-  Title1: string;
-  Title2: string;
-  Title3: string;
-  Title4: string;
-  Title5: string;
-};
-export const Login: React.FC<loginProps> = ({ label }) => {
+export const Login: React.FC = () => {
   return (
-    <div>
-      {/* <Form<FormValues>
-        onSubmit={async (values) => {
-          alert(JSON.stringify(values, null, 2));
-        }}
-        id="my-form"
-      >
-        {({ register, formState, getValues, setValue }) => {
-          return (
-            <>
-              <InputField registration={register('Title1')} placeholder="placeholder" />
-            
-              <ToggleButton active={false}  />
-              <ToggleButton active={true}  />
-              <CheckBox registration={register('Title2')}    />
-              <CheckBox  registration={register('Title3')}    />
-              <RadioButton defaultValue='defaultValu1'  registration={register('Title4')}    />
-              <RadioButton defaultValue='defaultValue2'  registration={register('Title4')}    />
-              <button>button</button>
-            </>
-          );
-        }}
-      </Form> */}
-    </div>
+    <LoginLayout>
+      <UserLoginForm />
+    </LoginLayout>
   );
 };

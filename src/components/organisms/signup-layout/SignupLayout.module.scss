@@ -1,0 +1,25 @@
+@import '/src/core/styles/variables.scss';
+
+.base {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerBg {
+  background-image: linear-gradient(to top left, var(--login-bg));
+  width: calc(100% - 2rem);
+  position: absolute;
+  min-height: 35vh;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 48px;
+  padding-bottom: 224px;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  border-radius: 0.75rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
