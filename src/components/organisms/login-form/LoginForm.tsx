@@ -12,7 +12,7 @@ export const UserLoginForm: FunctionComponent<Props> = () => {
   const intl = useIntl();
 
   return (
-    <CardWrapper className={Styles.base}>
+    <CardWrapper className={Styles.base} noGap>
       <div className={Styles.header}>
         <h4>
           <FormattedMessage id="signin" />

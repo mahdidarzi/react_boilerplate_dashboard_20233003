@@ -1,5 +1,4 @@
 .base {
-  position: absolute;
   width: 100%;
   bottom: 0px;
   padding-top: 32px;
@@ -16,11 +15,21 @@
   left: 0;
   right: 0;
 
+  @media (max-width: 960px) {
+    flex-direction: column-reverse !important;
+    justify-content: center;
+  }
+
   ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: end;
+
+    @media (max-width: 960px) {
+      justify-content: center !important;
+    }
+
     li {
       padding: 0 16px;
 

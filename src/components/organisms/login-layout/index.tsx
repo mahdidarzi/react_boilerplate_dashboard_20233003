@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './LoginLayout.module.scss';
 import { Footer, Header } from 'components/organisms';
+import { SidebarWrapper } from '../sidebar';
 interface authenticationLayoutProps {
   children: React.ReactNode;
 }

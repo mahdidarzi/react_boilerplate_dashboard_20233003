@@ -4,3 +4,6 @@ export * from './product-card-footer';
 export * from './icon-button';
 export * from './project-card';
 export * from './platform-settings-item';
+export * from './sidebar-link';
+export * from './sidebar-dropdown';
+export * from './sidebar-subitem';

@@ -5,4 +5,9 @@
   background-image: linear-gradient(to top left, var(--login-bg));
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  padding-top: 100px;
+  @media (max-width: 960px) {
+    padding-top: 150px;
+  }
 }

@@ -1,0 +1,56 @@
+.base {
+  position: relative;
+  width: 100%;
+  padding: 16px 22px;
+  color: black;
+  background-color: #252532;
+  gap: 12px;
+
+  &_active {
+    background-color: green;
+  }
+}
+
+.text_container {
+  flex: 1;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.item_icon_placeholder {
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+
+.menu_indicator_icon {
+  margin-top: 2px;
+  font-size: 8px;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.side_line_container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  div {
+    height: 100%;
+    width: 7px;
+  }
+
+  &_active {
+    div {
+      height: 100%;
+      width: 7px;
+      background-color: #febc37;
+    }
+  }
+}

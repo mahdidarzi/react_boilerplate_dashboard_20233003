@@ -1,0 +1,44 @@
+.base {
+  gap: 12px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 1rem 0.625rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &_active {
+    background-image: linear-gradient(to top left, var(--login-bg));
+  }
+}
+
+.text_container {
+  flex: 1;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item {
+  &_icon_container {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_icon {
+    font-size: 24px;
+  }
+}

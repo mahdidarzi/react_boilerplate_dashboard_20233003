@@ -30,7 +30,7 @@ export const LanguageChanger: React.FC<LanguageChangerProps> = ({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     <div className={styles.base} onClick={onChange(CURRENT_LANGUAGE.key)}>
-      <p>{CURRENT_LANGUAGE.title}</p>
+      {/* <p>{CURRENT_LANGUAGE.title}</p> */}
       <img className={styles.flag} src={CURRENT_LANGUAGE.imag} />
     </div>
   );
