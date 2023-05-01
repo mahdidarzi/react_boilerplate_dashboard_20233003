@@ -36,7 +36,8 @@ export const SidebarWrapper: React.FC<React.PropsWithChildren<SidebarProps>> = (
       <nav className={classes}>
         <Icon icon={'arrow_back'} className={styles.back} onClick={handleClose} />
         <div className={styles.top_section}>
-          <img src={`${logoImage}`} />
+          {/* <img src={`${logoImage}`} /> */}
+          <h6 className={styles.mainTitle}>Material Dashboard</h6>
         </div>
         <ul className="d-flex flex-column nav p-0 m-0">
           {items.map((item) => {

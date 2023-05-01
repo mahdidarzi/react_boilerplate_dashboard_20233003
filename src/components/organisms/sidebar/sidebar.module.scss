@@ -3,12 +3,22 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  background-color: rgb(240, 242, 245);
 
   a {
     text-decoration: none !important;
   }
 }
 
+.mainTitle {
+  color: white;
+  font-weight: 600;
+  margin-top: 30px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+}
 .container {
   width: -webkit-fill-available;
   flex: 1;

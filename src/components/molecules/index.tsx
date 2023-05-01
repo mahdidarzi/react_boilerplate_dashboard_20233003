@@ -7,3 +7,5 @@ export * from './platform-settings-item';
 export * from './sidebar-link';
 export * from './sidebar-dropdown';
 export * from './sidebar-subitem';
+export * from './icon-card';
+export * from './chart-card';

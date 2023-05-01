@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Login } from 'pages/login';
-import { Signup } from 'pages/signup';
-import { Profile } from 'pages/profile';
+import { Profile, Signup, Login, Dashboard } from 'pages';
 
 export const AuthRoutes = () => {
   return (
@@ -15,6 +13,7 @@ export const AuthRoutes = () => {
 export const DashboardRoutes = () => {
   return (
     <Routes>
+      <Route path="*" element={<Dashboard />} />
       <Route path="profile" element={<Profile />} />
     </Routes>
   );
