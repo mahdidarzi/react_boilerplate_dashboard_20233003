@@ -39,5 +39,6 @@ export const EnglishKeys = {
   BUDGET: 'BUDGET',
   COMPLETION: 'COMPLETION',
   orders_overview: 'Orders overview',
+  authors_table: 'Authors Table',
   a: '',
 };

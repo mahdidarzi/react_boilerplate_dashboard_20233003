@@ -12,3 +12,5 @@ export * from './login-form/LoginForm';
 export * from './dashboard-layout/index';
 export * from './projects-summary';
 export * from './orders-overview';
+export * from './authors-table';
+export * from './projects-table';
