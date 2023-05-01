@@ -34,5 +34,10 @@ export const EnglishKeys = {
   'signup.message': 'Enter your email and password to register',
   'signup.agree': 'I agree the',
   'signup.terms': 'Terms and Conditions',
+  COMPANIES: 'COMPANIES',
+  MEMBERS: 'MEMBERS',
+  BUDGET: 'BUDGET',
+  COMPLETION: 'COMPLETION',
+  orders_overview: 'Orders overview',
   a: '',
 };

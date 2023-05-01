@@ -18,10 +18,10 @@ export const IconCard: FunctionComponent<Props> = ({
   shadow = '',
   title = 'Bookings',
   value = 281,
-  percent = 55,
+  percent,
   footerText = 'than last week',
 }) => {
-  const IconStyle = React.useMemo(() => ({ color, boxShadow: `0 0 16 ${shadow}` }), [color, shadow]);
+  const IconStyle = React.useMemo(() => ({ background: color, boxShadow: `0 0 16 ${shadow}` }), [color, shadow]);
 
   return (
     <div className={Styles.base}>

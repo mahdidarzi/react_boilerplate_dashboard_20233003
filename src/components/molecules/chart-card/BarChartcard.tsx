@@ -16,7 +16,7 @@ import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-export const options = {
+const options = {
   responsive: true,
   maintainAspectRatio: true,
   scales: {
@@ -67,7 +67,7 @@ const DATA_SETS = [
   { label: 'S', data: '400' },
 ];
 
-export const data = {
+const data = {
   labels: DATA_SETS.map((i) => i.label),
   datasets: [
     {
@@ -83,7 +83,7 @@ export const data = {
 
 Chart.defaults.color = '#ff0000';
 
-export const ChartCard: FunctionComponent<Props> = ({
+export const BarChartCard: FunctionComponent<Props> = ({
   icon = 'schedule',
   color = 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))',
   shadow = '',

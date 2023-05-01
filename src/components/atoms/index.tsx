@@ -10,3 +10,4 @@ export * from './card';
 export * from './icon';
 export * from './user-conversation-Item';
 export * from './profile-image';
+export * from './progress-bar';

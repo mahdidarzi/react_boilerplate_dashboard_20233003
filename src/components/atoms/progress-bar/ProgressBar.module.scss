@@ -1,0 +1,15 @@
+.base {
+  display: block;
+  z-index: 0;
+  height: 0.375rem;
+  border-radius: 0.375rem;
+  overflow: visible;
+  position: relative;
+  background-color: rgb(240, 242, 245);
+}
+
+.progress {
+  background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
+  color: rgb(123, 128, 154);
+  height: 100%;
+}

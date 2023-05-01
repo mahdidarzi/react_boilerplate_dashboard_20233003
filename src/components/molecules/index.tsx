@@ -9,3 +9,4 @@ export * from './sidebar-dropdown';
 export * from './sidebar-subitem';
 export * from './icon-card';
 export * from './chart-card';
+export * from './kebab-menu';

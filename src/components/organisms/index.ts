@@ -10,3 +10,5 @@ export * from './signup-layout/index';
 export * from './signup-form/index';
 export * from './login-form/LoginForm';
 export * from './dashboard-layout/index';
+export * from './projects-summary';
+export * from './orders-overview';
