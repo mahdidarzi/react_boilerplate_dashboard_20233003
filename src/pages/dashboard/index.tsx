@@ -7,7 +7,7 @@ import { IconCard, BarChartCard, LineChartCard } from 'components/molecules';
 export const Dashboard: FunctionComponent = () => {
   return (
     <DashboardLayout>
-      <Row>
+      <Row className="gy-5">
         <Col md={3}>
           <IconCard title={'Bookings'} value="281" percent="+55" icon="weekend" />
         </Col>
@@ -41,10 +41,10 @@ export const Dashboard: FunctionComponent = () => {
         </Col>
       </Row>
       <Row>
-        <Col xs={4}>
+        <Col md={4}>
           <BarChartCard />
         </Col>
-        <Col xs={4}>
+        <Col md={4}>
           <LineChartCard
             color="linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71))"
             shadow="rgba(0, 0, 0, 0.14) 0rem 0.25rem 1.25rem 0rem, rgba(76, 175, 79, 0.4) 0rem 0.4375rem 0.625rem -0.3125rem"
@@ -53,7 +53,7 @@ export const Dashboard: FunctionComponent = () => {
             value="(+15%) increase in today sales."
           />
         </Col>
-        <Col xs={4}>
+        <Col md={4}>
           <LineChartCard
             color="linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))"
             title="Completed Tasks"
@@ -63,11 +63,11 @@ export const Dashboard: FunctionComponent = () => {
           />
         </Col>
       </Row>
-      <Row className="mt-3">
-        <Col xs={8}>
+      <Row className="mt-3 gy-3">
+        <Col md={8}>
           <ProjectSummery />
         </Col>
-        <Col xs={4}>
+        <Col md={4}>
           <OrdersOverview />
         </Col>
       </Row>
