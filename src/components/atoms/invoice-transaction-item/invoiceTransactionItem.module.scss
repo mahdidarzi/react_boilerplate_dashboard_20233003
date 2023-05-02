@@ -1,0 +1,89 @@
+.base {
+  display: flex;
+  margin: 24px 0;
+  grid-gap: 8px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.icon {
+  outline: 0px;
+  margin: 0px;
+  cursor: pointer;
+  letter-spacing: 0.02857em;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  border-radius: 10rem;
+  width: 2.375rem;
+  min-width: 2.375rem;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.6875rem 0.6875rem 0.625rem;
+  background-size: 150% !important;
+  background-position-x: 25% !important;
+}
+
+.iconRed {
+  border: 1px solid rgb(244, 67, 53);
+  color: rgb(244, 67, 53);
+}
+.iconGreen {
+  border: 1px solid rgb(76, 175, 80);
+  color: rgb(76, 175, 80);
+}
+.iconPending {
+  border: 1px solid rgb(52, 71, 103);
+  color: rgb(52, 71, 103);
+}
+
+.price {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  opacity: 1;
+  border: none;
+  font-weight: 600;
+}
+
+.priceRed {
+  color: rgb(244, 67, 53);
+}
+.priceGreen {
+  color: rgb(76, 175, 80);
+}
+.pricePending {
+  color: rgb(52, 71, 103);
+}
+
+.title {
+  margin: 0px 0px 0.35em;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(52, 71, 103);
+  font-weight: 600;
+}
+
+.date {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: 0.03333em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(123, 128, 154);
+  font-weight: 400;
+}

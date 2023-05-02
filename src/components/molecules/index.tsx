@@ -10,3 +10,6 @@ export * from './sidebar-subitem';
 export * from './icon-card';
 export * from './chart-card';
 export * from './kebab-menu';
+export * from './payment-method';
+export * from './invoices';
+export * from './billing-info';

@@ -3,71 +3,95 @@ import Styles from './AuthorsTable.module.scss';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { Table } from 'components/molecules/table';
 import { FormattedMessage } from 'react-intl';
+import { ProfileImage } from 'components/atoms';
 
 export type Authors = {
-  firstName: string;
-  lastName: string;
-  age: number;
-  visits: number;
+  image: string;
+  name: string;
+  email: string;
+  jobTitle: string;
+  jobDes: string;
+  date: string;
   status: string;
-  progress: number;
 };
 
 const defaultData: Authors[] = [
   {
-    firstName: 'tanner',
-    lastName: 'linsley',
-    age: 24,
-    visits: 100,
-    status: 'In Relationship',
-    progress: 50,
-  },
-  {
-    firstName: 'tandy',
-    lastName: 'miller',
-    age: 40,
-    visits: 40,
-    status: 'Single',
-    progress: 80,
-  },
-  {
-    firstName: 'joe',
-    lastName: 'dirte',
-    age: 45,
-    visits: 20,
-    status: 'Complicated',
-    progress: 10,
+    image: 'https://demos.creative-tim.com/material-dashboard-react/static/media/home-decor-1.05e218fd495ccc65c99d.jpg',
+    name: 'John Michael',
+    email: 'john@creative-tim.com',
+    jobTitle: 'Manager',
+    jobDes: 'Organization',
+    status: 'ONLINE',
+    date: '23/04/18',
   },
 ];
 
 const columnHelper = createColumnHelper<Authors>();
 
 const columns = [
-  columnHelper.accessor('firstName', {
-    cell: (info) => <div style={{ width: 100 }}>{info.getValue()}</div>,
+  columnHelper.accessor('name', {
+    header: 'Name',
+    cell: (info) => {
+      const data = info.row.original;
+      return (
+        <div className="d-flex flex-grow-1">
+          <ProfileImage src={data.image} medium rounded />
+          <div className="d-flex flex-column ms-2">
+            <p className="m-0 ">{info.getValue()}</p>
+            <p className="m-0">{data.email}</p>
+          </div>
+        </div>
+      );
+    },
     footer: (info) => info.column.id,
   }),
-  columnHelper.accessor((row) => row.lastName, {
-    id: 'lastName',
-    cell: (info) => <i>{info.getValue()}</i>,
-    header: () => <span>Last Name</span>,
-    footer: (info) => info.column.id,
-  }),
-  columnHelper.accessor('age', {
-    header: () => 'Age',
-    cell: (info) => info.renderValue(),
-    footer: (info) => info.column.id,
-  }),
-  columnHelper.accessor('visits', {
-    header: () => <span>Visits</span>,
+  columnHelper.accessor('name', {
+    header: 'Function',
+    cell: (info) => {
+      const data = info.row.original;
+      return (
+        <div className="d-flex flex-column ms-2">
+          <p className="m-0 ">{data.jobTitle}</p>
+          <p className="m-0">{data.jobDes}</p>
+        </div>
+      );
+    },
     footer: (info) => info.column.id,
   }),
   columnHelper.accessor('status', {
     header: 'Status',
+    cell: (info) => {
+      const style = {
+        width: 'fit-content',
+        fontSize: 10,
+        padding: '2px 4px',
+        borderRadius: '0.375rem',
+        background: 'linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71))',
+        color: 'rgb(255, 255, 255)',
+      };
+      return (
+        <div>
+          <div style={style}>{info.getValue()}</div>
+        </div>
+      );
+    },
     footer: (info) => info.column.id,
   }),
-  columnHelper.accessor('progress', {
-    header: 'Profile Progress',
+  columnHelper.accessor('date', {
+    header: 'Employed',
+    footer: (info) => info.column.id,
+  }),
+  columnHelper.accessor('name', {
+    header: 'Action',
+    cell: (info) => {
+      const data = info.row.original;
+      return (
+        <div className="d-flex flex-column ms-2">
+          <p className="m-0 ">EDIT</p>
+        </div>
+      );
+    },
     footer: (info) => info.column.id,
   }),
 ];

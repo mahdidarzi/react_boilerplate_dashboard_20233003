@@ -1,0 +1,129 @@
+.base {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  overflow-wrap: break-word;
+  border: 0px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.75rem;
+  overflow: visible;
+  background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem 1.25rem 1.5625rem -0.3125rem,
+    rgba(0, 0, 0, 0.04) 0rem 0.625rem 0.625rem -0.3125rem;
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  height: 100%;
+}
+
+.cardBg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  background: url(https://demos.creative-tim.com/material-dashboard-react/static/media/pattern-tree.156bb943ac7fd244f10c115d085e085e.svg)
+    0% 0% / cover transparent;
+}
+
+.icon {
+  color: white;
+}
+
+.number {
+  margin: 24px 0px 40px;
+  font-size: 1.25rem;
+  line-height: 1.375;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.footer {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+
+.info {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+
+.infoItem {
+  margin-right: 24px;
+  line-height: 1;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+}
+
+.infoTitle {
+  margin: 0px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.02857em;
+  opacity: 0.8;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.infoDes {
+  margin: 0px;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.0075em;
+  opacity: 1;
+  text-transform: capitalize;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.mastercard {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  width: 20%;
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+
+  img {
+    width: 60%;
+    margin-top: 8px;
+    opacity: 1;
+    background: transparent;
+    color: rgb(52, 71, 103);
+    box-shadow: none;
+  }
+}
