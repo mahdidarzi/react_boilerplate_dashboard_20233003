@@ -6,7 +6,7 @@
   position: relative;
   min-width: 0px;
   overflow-wrap: break-word;
-  background-color: rgb(255, 255, 255);
+  background: var(--background-color);
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.75rem;
@@ -27,7 +27,7 @@
   align-items: center;
   opacity: 1;
   background: transparent;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   box-shadow: none;
 }
 
@@ -41,7 +41,7 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -81,11 +81,18 @@
   background-origin: initial;
   background-clip: initial;
   background-color: initial;
-  color: rgb(255, 255, 255);
+  background: white;
   box-shadow: rgba(52, 71, 103, 0.15) 0rem 0.1875rem 0.1875rem 0rem,
     rgba(52, 71, 103, 0.2) 0rem 0.1875rem 0.0625rem -0.125rem, rgba(52, 71, 103, 0.15) 0rem 0.0625rem 0.3125rem 0rem;
   background-size: 150% !important;
   background-position-x: 25% !important;
+
+  p {
+    margin: 0;
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
 }
 
 .method {
@@ -97,18 +104,19 @@
   padding: 24px;
   opacity: 1;
   background: transparent;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   border-radius: 0.5rem;
   box-shadow: none;
   border: 0.0625rem solid rgb(222, 226, 230);
   max-width: 338px;
+  margin-top: 8px;
 
   img {
     width: 10%;
     margin-right: 16px;
     opacity: 1;
     background: transparent;
-    color: rgb(52, 71, 103);
+    color: var(--text-primary);
     box-shadow: no;
   }
 }

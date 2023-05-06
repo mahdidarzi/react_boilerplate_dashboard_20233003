@@ -1,12 +1,11 @@
 .base {
-  color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   display: flex;
   flex-direction: column;
   position: relative;
   min-width: 0px;
   overflow-wrap: break-word;
-  background-color: rgb(255, 255, 255);
+  background: var(--background-color);
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.75rem;
@@ -32,7 +31,7 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -48,7 +47,7 @@
   margin-bottom: 8px;
   opacity: 1;
   background: transparent;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   box-shadow: none;
 
   p {
@@ -58,7 +57,7 @@
   button {
     border: none;
     background: unset;
-    color: rgb(52, 71, 103);
+    color: var(--text-primary);
   }
 }
 
@@ -92,9 +91,10 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   font-weight: 600;
 }
+
 .itemCode {
   margin: 0px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -105,9 +105,10 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(123, 128, 154);
+  color: var(--text-secondary);
   font-weight: 400;
 }
+
 .price {
   margin: 0px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -118,6 +119,6 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(123, 128, 154);
+  color: var(--text-secondary);
   font-weight: 400;
 }

@@ -16,7 +16,7 @@ export const PaymentMethod: FunctionComponent<Props> = () => {
           <FormattedMessage id={'payment_method'} />
         </p>
         <IconButton icon={'add'} className={Styles.button}>
-          <FormattedMessage id={'add_new_card'} />
+          <FormattedMessage id={'add_new_card'} tagName={'p'} />
         </IconButton>
       </div>
       <div>

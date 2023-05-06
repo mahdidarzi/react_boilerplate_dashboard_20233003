@@ -36,8 +36,8 @@
   color: rgb(76, 175, 80);
 }
 .iconPending {
-  border: 1px solid rgb(52, 71, 103);
-  color: rgb(52, 71, 103);
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
 }
 
 .price {
@@ -57,7 +57,7 @@
   color: rgb(76, 175, 80);
 }
 .pricePending {
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
 }
 
 .title {
@@ -70,7 +70,7 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(52, 71, 103);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -84,6 +84,6 @@
   text-transform: none;
   vertical-align: unset;
   text-decoration: none;
-  color: rgb(123, 128, 154);
+  color: var(--text-secondary);
   font-weight: 400;
 }

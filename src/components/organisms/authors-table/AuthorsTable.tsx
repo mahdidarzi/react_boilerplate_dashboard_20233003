@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import Styles from './AuthorsTable.module.scss';
-import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
+import { createColumnHelper } from '@tanstack/react-table';
 import { Table } from 'components/molecules/table';
 import { FormattedMessage } from 'react-intl';
 import { ProfileImage } from 'components/atoms';
