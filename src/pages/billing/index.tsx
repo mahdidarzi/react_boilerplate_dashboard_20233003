@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import { DashboardLayout, AuthorsTable, ProjectsTable } from 'components/organisms';
+import { FunctionComponent } from 'react';
+import { DashboardLayout } from 'components/organisms';
 import { Row, Col } from 'react-bootstrap';
 import { CreditCard, IncomeInfoCard } from 'components/atoms';
 import { BillingInfo, Invoces, PaymentMethod } from 'components/molecules';

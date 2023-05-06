@@ -6,6 +6,7 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0px;
+    background: transparent;
   }
 
   tbody {
@@ -19,6 +20,7 @@
     background-clip: border-box;
     border: 0px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.75rem;
+    background: transparent;
   }
 
   th {
@@ -29,14 +31,14 @@
     background-clip: border-box;
     border-radius: 0.75rem;
     overflow: visible;
-    color: rgba(0, 0, 0, 0.87);
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.65rem;
     font-weight: 400;
     line-height: 1.625;
     letter-spacing: 0.00938em;
-    color: rgb(52, 71, 103);
+    color: var(--text-primary);
     text-transform: uppercase;
+    background: transparent;
   }
 
   td {
@@ -45,10 +47,11 @@
     padding: 12px 24px;
     opacity: 1;
     background: transparent;
-    color: rgb(52, 71, 103);
+    color: var(--text-primary);
     box-shadow: none;
     font-size: 0.875rem;
     border-top: 0.0625rem solid rgb(240, 242, 245);
+    background: transparent;
   }
 
   tr {
@@ -59,10 +62,10 @@
     position: relative;
     min-width: 0px;
     overflow-wrap: break-word;
-    background-color: rgb(255, 255, 255);
     background-clip: border-box;
     border: 0px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.75rem;
     overflow: visible;
+    background: transparent;
   }
 }
