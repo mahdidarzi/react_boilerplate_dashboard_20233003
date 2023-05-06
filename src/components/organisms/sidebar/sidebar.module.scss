@@ -73,6 +73,10 @@
   top: 16px;
   padding: 8px;
   cursor: pointer;
+  display: none;
+  @media (max-width: 960px) {
+    display: flex;
+  }
 }
 
 .top_section {

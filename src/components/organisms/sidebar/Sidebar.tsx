@@ -8,6 +8,7 @@ import styles from './sidebar.module.scss';
 import { SubItemMenu } from './components/SubItemMenu';
 import type { SidebarItem } from './types';
 import { Icon } from 'components/atoms';
+import { useSwipeable } from 'react-swipeable';
 
 interface SidebarProps {
   items?: SidebarItem[];
@@ -31,8 +32,14 @@ export const SidebarWrapper: React.FC<React.PropsWithChildren<SidebarProps>> = (
     setIsOpen(false);
   }
 
+  const handlers = useSwipeable({
+    onSwipedRight: () => {
+      if (!isOpen) setIsOpen(true);
+    },
+  });
+
   return (
-    <div className={wrapperClasses}>
+    <div className={wrapperClasses} {...handlers}>
       <nav className={classes}>
         <Icon icon={'arrow_back'} className={styles.back} onClick={handleClose} />
         <div className={styles.top_section}>
